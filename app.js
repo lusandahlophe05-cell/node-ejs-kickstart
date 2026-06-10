@@ -1,6 +1,14 @@
 //include Express
 const express = require('express');
 
+// 💡 CRITICAL: Load our user data file from the data folder
+const userData = require('./data/test.json');
+
+// 🧪 TEMP SANITY CHECK: Dump the array to the terminal console
+console.log("--- DATA LOAD TEST ---");
+console.log(userData[0]); // Prints just the very first user object
+console.log("----------------------");
+
 //server will listen on this port
 const port = 3000;
 
