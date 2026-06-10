@@ -33,6 +33,34 @@ app.get('/about',(req,res)=>{
     res.render('pages/about',{'title': title});
 });
 
+// ==========================================
+// 👥 NEW ROUTE: The User Directory (The List)
+// ==========================================
+app.get('/users', (req, res) => {
+    res.render('users/index', {
+        title: 'Users',
+        users: userData // Passes the 100-user array to the template
+    });
+});
+
+// ==========================================
+// 🔍 NEW ROUTE: Individual Profile (The View)
+// ==========================================
+app.get('/users/view/:id', (req, res) => {
+    let id = req.params.id;
+    
+    // We cheat elegantly by subtracting 1 to match array zero-indexing
+    res.render('users/view', {
+        title: 'User Profile',
+        user: userData[--id] 
+    });
+});
+
+app.listen(port, () => {
+    console.log(`Server running at port: ${port}`);
+});
+
+
 //Set server to listen for requests
 app.listen(port, () => {
   console.log(`Server running at port: ${port}`);
