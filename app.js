@@ -55,6 +55,16 @@ app.get('/users/view/:id', (req, res) => {
         user: userData[--id] 
     });
 });
+app.get('/about', (req, res) => {
+    res.render('pages/about', { title: 'About' });
+});
+app.get('/music', (req, res) => {
+    res.render('pages/music', { title: 'My Favorite Music' });
+});
+
+app.get('/travel', (req, res) => {
+    res.render('pages/travel', { title: 'My Travel Dreams' });
+});
 
 app.listen(port, () => {
     console.log(`Server running at port: ${port}`);
