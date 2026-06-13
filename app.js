@@ -59,11 +59,11 @@ app.get('/about', (req, res) => {
     res.render('pages/about', { title: 'About' });
 });
 app.get('/music', (req, res) => {
-    res.render('pages/music', { title: 'My Favorite Music' });
+    res.render('pages/my-favortite-music', { title: 'My Favorite Music' });
 });
 
 app.get('/travel', (req, res) => {
-    res.render('pages/travel', { title: 'My Travel Dreams' });
+    res.render('pages/my-travel-dream', { title: 'My Travel Dreams' });
 });
 
 app.listen(port, () => {
