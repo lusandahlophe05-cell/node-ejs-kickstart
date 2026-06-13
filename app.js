@@ -62,8 +62,8 @@ app.get('/music', (req, res) => {
     res.render('pages/my-favortite-music', { title: 'My Favorite Music' });
 });
 
-app.get('/travel', (req, res) => {
-    res.render('pages/my-travel-dream', { title: 'My Travel Dreams' });
+app.get('/softwareEngineer', (req, res) => {
+    res.render('pages/programming-vocabulary.ejs,' { title: 'programming-vocabulary' });
 });
 
 app.listen(port, () => {
