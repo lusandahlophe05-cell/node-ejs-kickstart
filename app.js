@@ -63,7 +63,7 @@ app.get('/music', (req, res) => {
 });
 
 app.get('/softwareEngineer', (req, res) => {
-    res.render('pages/programming-vocabulary.ejs,' { title: 'programming-vocabulary' });
+    res.render('pages/programming-vocabulary',{ title: 'programming-vocabulary' });
 });
 
 app.listen(port, () => {
