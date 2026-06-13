@@ -23,13 +23,13 @@ app.use(express.static(__dirname + '/public'));
 
 //index/home URL
 app.get('/',(req,res)=>{
-    let title = "Home Page";
+    let title = "Amy Tan Mother Tongue Summary";
     res.render('pages/index',{'title': title});
 });
 
 //about URL
 app.get('/about',(req,res)=>{
-    let title = "About Page";
+    let title = "A Trip To The Mall";
     res.render('pages/about',{'title': title});
 });
 
@@ -39,7 +39,7 @@ app.get('/about',(req,res)=>{
 app.get('/users', (req, res) => {
     res.render('users/index', {
         title: 'Users',
-        users: userData // Passes the 100-user array to the template
+        users: userData, // Passes the 100-user array to the template
     });
 });
 
