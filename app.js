@@ -58,12 +58,12 @@ app.get('/users/view/:id', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('pages/about', { title: 'About' });
 });
-app.get('/music', (req, res) => {
-    res.render('pages/my-favortite-music', { title: 'My Favorite Music' });
+app.get('/softwareEngineer', (req, res) => {
+    res.render('pages/programming-vocabulary', { title: 'programming-vocabulary' });
 });
 
-app.get('/softwareEngineer', (req, res) => {
-    res.render('pages/programming-vocabulary',{ title: 'programming-vocabulary' });
+app.get('/travel', (req, res) => {
+    res.render('pages/my-travel-dream',{ title: 'pages/my-travel-dream' });
 });
 
 app.listen(port, () => {
