@@ -55,13 +55,18 @@ app.get('/users/view/:id', (req, res) => {
         user: userData[--id] 
     });
 });
+
+//about
 app.get('/about', (req, res) => {
     res.render('pages/about', { title: 'About' });
 });
+
+//software Engineer
 app.get('/softwareEngineer', (req, res) => {
     res.render('pages/programming-vocabulary', { title: 'programming-vocabulary' });
 });
 
+//travel
 app.get('/travel', (req, res) => {
     res.render('pages/my-travel-dream',{ title: 'pages/my-travel-dream' });
 });
